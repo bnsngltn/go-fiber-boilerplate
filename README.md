@@ -8,6 +8,13 @@ Also contains some basic swagger documentations using [swagger ui](https://githu
 
 Feel free to use this on your projects. Leave me a star if this repo helped you get started.
 
-Cheers,
+## To Add
+- User Roles (User can have many roles, a role has many permissions)
+- Manual Gorm Migrations
+- Manual Seeding
 
-Ben!
+## Contact Me
+Just raise an issue on this repo.
+
+**Cheers,**
+Ben
