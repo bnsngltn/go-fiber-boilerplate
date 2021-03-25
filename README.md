@@ -9,7 +9,7 @@ Also contains some basic swagger documentations using [swagger ui](https://githu
 Feel free to use this on your projects. Leave me a star if this repo helped you get started.
 
 ## To Add
-- User Roles (User can have many roles, a role has many permissions)
+- User Roles and Role Permissions (User can have many roles, a role has many permissions)
 - Manual Gorm Migrations
 - Manual Seeding
 
