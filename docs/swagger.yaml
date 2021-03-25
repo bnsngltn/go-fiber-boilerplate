@@ -1,0 +1,57 @@
+basePath: /api
+definitions:
+  model.User:
+    properties:
+      id:
+        type: integer
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Boilerplate
+  title: Go Fiber Boilerplate
+  version: "1.0"
+paths:
+  /generic:
+    get:
+      consumes:
+      - application/json
+      description: This route needs token
+      produces:
+      - application/json
+      security:
+      - BearerToken: []
+      summary: Need token
+      tags:
+      - generic
+  /users/register:
+    post:
+      consumes:
+      - application/json
+      description: Register a brand new user to the database.
+      parameters:
+      - description: Details needed for registration
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: Register user
+      tags:
+      - users
+securityDefinitions:
+  BearerToken:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
